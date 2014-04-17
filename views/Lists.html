@@ -4,7 +4,7 @@
     <div data-options="dxContent : { targetPlaceholder: 'content' } " >
         <div id="tabs" data-bind="dxTabs: { items: tabs, selectedIndex: selectedTab }"></div>
                 
-        <div class="list-content" data-bind="if: simpleList.rendered, visible: simpleList.listVisible">
+        <div class="list-content" data-bind="if: simpleList.rendered, css: { 'dx-scrollable-hidden': !simpleList.listVisible() }">
             <!-- ko if: editEnabled -->
                 <div class="editType-wrapper" data-bind="dxSelectBox: { dataSource: deleteTypes, value: deleteType }"></div>
             <!-- /ko -->
@@ -13,7 +13,7 @@
             <!-- /ko -->
         </div>
 
-        <div class="list-content" data-bind="if: groupedList.rendered, visible: groupedList.listVisible">
+        <div class="list-content" data-bind="if: groupedList.rendered, css: { 'dx-scrollable-hidden': !groupedList.listVisible() }">
             <!-- ko with: groupedList -->
             <div class="list-indentation" data-bind="dxList: {dataSource: dataSource, grouped: true}">
                 <div data-options="dxTemplate: { name: 'item'}">
@@ -26,18 +26,18 @@
             <!-- /ko -->
         </div>
 
-        <div class="list-content" data-bind="if: customList.rendered, visible: customList.listVisible">
-            <div class="search-wrapper" data-bind="dxTextBox: { placeholder: 'Search', mode: 'search', value: customList.searchQuery, valueUpdateEvent: 'keyup' } "></div> 
+        <div class="list-content" data-bind="if: customList.rendered, css: { 'dx-scrollable-hidden': !customList.listVisible() }">
+            <div class="search-wrapper" data-bind="dxTextBox: { placeholder: 'Search', mode: 'search', value: customList.searchQuery, valueUpdateEvent: 'keyup', enterKeyAction: customList.resetFocus } "></div> 
             <!-- ko with: customList -->
             <div class="list-indentation" data-bind="dxList: {dataSource: dataSource, searchQuery: searchQuery}">
                 <div data-options="dxTemplate : { name: 'item' } " >
                     <div>
                         <div class="product-image-box">
-                            <img data-bind="attr: { src: $data.Image, alt: $data.Name }" />
+                            <img data-bind="attr: { src: Image, alt: Name }" />
                         </div>
                         <div>
-                            <div data-bind="text: $data.Name" class="product-name"></div>
-                            <div class="product-price"><strong data-bind="text: Globalize.format($data.Price, 'c2')"></strong></div>
+                            <div data-bind="text: Name" class="product-name"></div>
+                            <div class="product-price"><strong data-bind="text: Globalize.format(Price, 'c2')"></strong></div>
                         </div>
                     </div>
                 </div>

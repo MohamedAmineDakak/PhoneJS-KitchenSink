@@ -9,7 +9,7 @@
     
     <div class="navigation" data-options="dxContent : { targetPlaceholder: 'content' } " >       
         <div>
-            <img data-bind="attr: { src: navbar.currentImage }" class="content-image"/>
+            <div data-bind="css: navbar.currentImageClass" class="content-image" />
         </div>
         <div class="navbar-wrapper">
             <div data-bind="dxNavBar: { items: navbar.items , itemClickAction: navbar.itemClickAction, selectedIndex: navbar.selectedIndex }"></div>

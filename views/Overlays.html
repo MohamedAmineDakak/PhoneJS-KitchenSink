@@ -54,41 +54,54 @@
             </div>
         </div>
 
+        <!-- ko with: toast -->
         <div class="dx-fieldset">
             <div class="dx-field">
                 <div class="dx-field-label">Toast Info</div>
                 <div class="dx-field-value">
-                    <div data-bind="dxButton: { text: 'Show', clickAction: toast.showInfo }"></div>
+                    <div data-bind="dxButton: { text: 'Show', clickAction: showInfo }"></div>
                 </div>
             </div>
             <div class="dx-field">
                 <div class="dx-field-label">Toast Error</div>
                 <div class="dx-field-value">
-                    <div data-bind="dxButton: { text: 'Show', clickAction: toast.showError }"></div>
+                    <div data-bind="dxButton: { text: 'Show', clickAction: showError }"></div>
                 </div>
             </div>
             <div class="dx-field">
                 <div class="dx-field-label">Toast Success</div>
                 <div class="dx-field-value">
-                    <div data-bind="dxButton: { text: 'Show', clickAction: toast.showSuccess }"></div>
+                    <div data-bind="dxButton: { text: 'Show', clickAction: showSuccess }"></div>
                 </div>
             </div>
             <div class="dx-field">
                 <div class="dx-field-label">Toast Warning</div>
                 <div class="dx-field-value">
-                    <div data-bind="dxButton: { text: 'Show', clickAction: toast.showWarning }"></div>
+                    <div data-bind="dxButton: { text: 'Show', clickAction: showWarning }"></div>
                 </div>
             </div>
             <div class="dx-field">
                 <div class="dx-field-label">Toast Custom</div>
                 <div class="dx-field-value">
-                    <div data-bind="dxButton: { text: 'Show', clickAction: toast.showCustom }"></div>
+                    <div data-bind="dxButton: { text: 'Show', clickAction: showCustom }"></div>
                 </div>
             </div>
         </div>
+
+             
+        <div data-bind="dxToast: { message: 'Sample info message', type: 'info', visible: toastInfoVisible }"></div>
+        <div data-bind="dxToast: { message: 'Sample error message', type: 'error', visible: toastErrorVisible }"></div>
+        <div data-bind="dxToast: { message: 'Sample success message', type: 'success', visible: toastSuccessVisible }"></div>
+        <div data-bind="dxToast: { message: 'Sample warning message', type: 'warning', visible: toastWarningVisible }"></div>
+        <div data-bind="dxToast: { type: 'custom', visible: toastCustomVisible }">
+            <div class="dx-icon dx-icon-user"></div>
+            New user added!
+        </div>
+        <!-- /ko -->
+
       </div>
     <div data-bind="dxLoadPanel: { message: 'Please wait ...', visible: loadPanel.visible }"></div>
-    <div id="popup" data-bind="dxPopup: { height: 'auto' }">
+    <div data-bind="dxPopup: { height: 'auto', visible: popup.visible }">
         <div class="dx-clearfix" data-options="dxTemplate : { name: 'title' } ">
             <h2>Login</h2>
         </div>
@@ -101,20 +114,13 @@
         </div>
     </div>
 
-    <div id="action_sheet" data-bind="dxActionSheet: { title: 'Action Sheet', items: actionsheet.items, showTitle: true }"></div>
+    <div data-bind="dxActionSheet: { title: 'Action Sheet', items: actionsheet.items, showTitle: true, visible: actionsheet.visible }"></div>
     
     <div data-bind="dxPopover: { width: 200, height: 'auto', visible: popover.visible, target: '.toggle-popover-button' }">
         <div data-bind="dxList: { items: popover.colors, itemClickAction: popover.close }"></div>
     </div>
-        
-    <div id="toast-info" data-bind="dxToast: { message: 'Sample info message', type: 'info' }"></div>
-    <div id="toast-error" data-bind="dxToast: { message: 'Sample error message', type: 'error' }"></div>
-    <div id="toast-success" data-bind="dxToast: { message: 'Sample success message', type: 'success' }"></div>
-    <div id="toast-warning" data-bind="dxToast: { message: 'Sample warning message', type: 'warning' }"></div>
-    <div id="toast-custom" data-bind="dxToast: { type: 'custom' }">
-        <div class="dx-icon dx-icon-user"></div>
-        New user added!
-    </div>
+    
+   
         
         
     </div>

@@ -1,15 +1,15 @@
 ﻿KitchenSink.Navigation = function(params) {
     var viewModel = {
         navbar: {
-            currentImage: ko.observable("./content/images/navigation/icon-home.png"),
+            currentImageClass: ko.observable("content-icon-home"),
             itemClickAction: function(e) {
-                this.navbar.currentImage(e.itemData.image);
+                this.navbar.currentImageClass(e.itemData.imageClass);
             },
             items: [
-                { text: "Home", icon: "home", image: "./content/images/navigation/icon-home.png" },
-                { text: "User", icon: "user", image: "./content/images/navigation/icon-user.png" },
-                { text: "Comment", icon: "comment", image: "./content/images/navigation/icon-message.png" },
-                { text: "Photo", icon: "photo", image: "./content/images/navigation/icon-image.png" }
+                { text: "Home", icon: "home", imageClass: "content-icon-home" },
+                { text: "User", icon: "user", imageClass: "content-icon-user" },
+                { text: "Comment", icon: "comment", imageClass: "content-icon-message" },
+                { text: "Photo", icon: "photo", imageClass: "content-icon-image" }
             ],
             selectedIndex: ko.observable(0)
         }

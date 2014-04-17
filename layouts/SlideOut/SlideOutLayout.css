@@ -41,6 +41,11 @@
     z-index: 200;
 }
 
+.dx-slideout .dx-slideout-item-container .dx-slideout-shield {
+    z-index: 201;
+    top: 42px;
+}
+
 .slideout-layout .layout-frame,
 .slideout-layout .layout-frame .layout-header,
 .slideout-layout .layout-frame .layout-header .dx-toolbar {
@@ -244,7 +249,7 @@
 }
 .dx-theme-ios.dx-version-major-7 .slideout-layout .layout-content {
     top: 44px;
-    background-color: #fff;
+    background-color: #EFEFF4;
 }
 
 .dx-theme-ios.dx-version-major-7 .slideout-layout .view-footer .dx-toolbar {
@@ -286,6 +291,10 @@
     top: 42px;
 }
 
+.dx-theme-android .slideout-layout .layout-header .dx-toolbar {
+    height: 40px;
+}
+
 /* Windows phone 8 */
 .dx-theme-win8.dx-color-scheme-white .slideout-layout .layout-content {
     background: #fff;
@@ -295,8 +304,13 @@
     background: #000;
 }
 
-.dx-theme-win8 .slideout-layout .layout-content {
-    top: 40px;    
+.dx-theme-win8 .slideout-layout .layout-header {
+    height: 60px;    
+}
+
+.dx-theme-win8 .slideout-layout .layout-content,
+.dx-theme-win8 .dx-slideout .dx-slideout-item-container .dx-slideout-shield {
+    top: 60px;    
 }
 
 .dx-theme-win8 .slideout-layout .layout-content.has-toolbar-bottom {
@@ -319,7 +333,7 @@
 }
 
 .dx-theme-win8 .slideout-layout .layout-header .dx-toolbar {
-    height: 45px;
+    height: 60px;
     opacity: 1;
 }
 .dx-theme-win8.dx-color-scheme-white .slideout-layout .layout-header .dx-toolbar {

@@ -29,20 +29,20 @@
 
     var viewModel = {
         swipeEvents: extendEvents(swipeEvents),
-        pointerEvents: extendEvents(pointerEvents)
-    };
-
-    viewModel.viewShown = function() {
-        var eventsName = "";
-        $.each(getAllEvents(), function(index, event) { eventsName += event.name + " "; });
-        $(".events-area").on(eventsName, function(e) {
-            $.each(getAllEvents(), function(index, item) {
-                if(item.enabled() && item.name === e.type) {
-                    item.count(item.count() + 1);
-                }
+        pointerEvents: extendEvents(pointerEvents),
+        viewRendered: function () {
+            var eventsName = "";
+            $.each(getAllEvents(), function (index, event) { eventsName += event.name + " "; });
+            $(".events-area").on(eventsName, function (e) {
+                $.each(getAllEvents(), function (index, item) {
+                    if (item.enabled() && item.name === e.type) {
+                        item.count(item.count() + 1);
+                    }
+                });
             });
-        });
+        }
+
     };
-    
+  
     return viewModel;
 };

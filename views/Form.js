@@ -1,31 +1,31 @@
 ﻿KitchenSink.Form = function(params) {
     var viewModel = {
-        autocomplete: {
+        dxAutocomplete: {
             text: ko.observable(""),
             cities: KitchenSink.db.cities
         },
-        "switch": {
+        dxSwitch: {
             value: ko.observable(true)
         },
-        slider: {
+        dxSlider: {
             value: ko.observable(5)
         },
-        rangeSlider: {
+        dxRangeSlider: {
             minValue: ko.observable(3),
             maxValue: ko.observable(7)
         },
-        lookup: {
+        dxLookup: {
             data: ["red", "green", "blue", "yellow"],
             value: ko.observable(null)
         },
-        selectbox: {
+        dxSelectbox: {
             data: ["light", "dark"],
             value: ko.observable(null)
         },
-        checkbox: {
+        dxCheckbox: {
             checked: ko.observable(false)
         },
-        radioGroup: {
+        dxRadioGroup: {
             items: [
                 { text: "Tea" },
                 { text: "Coffee" },

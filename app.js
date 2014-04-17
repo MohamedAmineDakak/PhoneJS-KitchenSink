@@ -29,37 +29,42 @@ $(function() {
             KitchenSink.config.navigation.push({
                 "title": "Panorama",
                 "action": "#Panorama",
-                "icon": "favorites"
+                "icon": "panorama"
             },
             {
                 "title": "Pivot",
                 "action": "#Pivot",
-                "icon": "favorites"
+                "icon": "pivot"
             });
         }
         return KitchenSink.config.navigation;
     }
 
+    function exitApp() {
+        switch(DevExpress.devices.current().platform) {
+            case "tizen":
+                tizen.application.getCurrentApplication().exit();
+                break;
+            case "android":
+                navigator.app.exitApp();
+                break;
+            case "win8":
+                window.external.Notify("DevExpress.ExitApp");
+                break;
+        }
+    }
+
     function onDeviceReady() {
         document.addEventListener("backbutton", onBackButton, false);
+        KitchenSink.app.navigatingBack.add(function() {
+            if(!KitchenSink.app.canBack()) {
+                exitApp();
+            }
+        });
     }
 
     function onBackButton() {
-        if(KitchenSink.app.canBack()) {
-            KitchenSink.app.back();
-        } else {
-            switch(DevExpress.devices.current().platform) {
-                case "tizen":
-                    tizen.application.getCurrentApplication().exit();
-                    break;
-                case "android":
-                    navigator.app.exitApp();
-                    break;
-                case "win8":
-                    window.external.Notify("DevExpress.ExitApp");
-                    break;
-            }
-        }
+        DevExpress.hardwareBackButton.fire();
     }
 
     KitchenSink.app.viewShown.add(showMenu);

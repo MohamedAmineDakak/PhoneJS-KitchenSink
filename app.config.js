@@ -118,7 +118,7 @@ window.KitchenSink = $.extend(true, window.KitchenSink, {
       {
         "title": "Custom Events",
         "action": "#CustomEvents",
-        "icon": "favorites"
+        "icon": "events"
       },
       {
         "title": "Icons",

@@ -24,135 +24,69 @@
     height: 100%;
 }
 
+.list-content .list-indentation {
+    height: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box; 
+    box-sizing: border-box;
+}
+
+
+
 /* iOS tab height - 44px + 27px */
 .dx-theme-ios .list-content .list-indentation {
-    height: 100%;
     padding-bottom: 44px;
-    
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box; 
-    box-sizing: border-box;
 }
 .dx-theme-ios .list-content .search-wrapper + .list-indentation {
-    height: 100%;
     padding-bottom: 76px;
-
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box; 
-    box-sizing: border-box;
 }
 .dx-theme-ios .list-content .editType-wrapper + .list-indentation {
-    height: 100%;
     padding-bottom: 90px;
-
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box; 
-    box-sizing: border-box;
 }
 
 /* android tab height - 46px + 40px*/
 .dx-theme-android .list-content .list-indentation {
-    height: 100%;
     padding-bottom: 46px;
-    
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box; 
-    box-sizing: border-box;
 }
 .dx-theme-android .list-content .search-wrapper + .list-indentation {
-    height: 100%;
     padding-bottom: 86px;
-
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box; 
-    box-sizing: border-box;
 }
 .dx-theme-android .list-content .editType-wrapper + .list-indentation {
-    height: 100%;
     padding-bottom: 91px;
-
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box; 
-    box-sizing: border-box;
 }
 
 /* IE tab height - 21px + 40px*/
 .dx-theme-win8 .list-content .list-indentation {
-    height: 100%;
     padding-bottom: 21px;
-    
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box; 
-    box-sizing: border-box;
 }
 .dx-theme-win8 .list-content .search-wrapper + .list-indentation {
-    height: 100%;
     padding-bottom: 61px;
-
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box; 
-    box-sizing: border-box;
 }
 .dx-theme-win8 .list-content .editType-wrapper + .list-indentation {
-    height: 100%;
     padding-bottom: 66px;
-
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box; 
-    box-sizing: border-box;
 }
 
 .dx-theme-tizen .list-content .list-indentation {
-    height: 100%;
     padding-bottom: 41px;
-    
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box; 
-    box-sizing: border-box;
 }
 
 .dx-theme-tizen .list-content .search-wrapper + .list-indentation{
-    height: 100%;
     padding-bottom: 86px;
-    
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box; 
-    box-sizing: border-box;
 }
 
 .dx-theme-tizen .list-content .editType-wrapper + .list-indentation {
-    height: 100%;
     padding-bottom: 85px;
-
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box; 
-    box-sizing: border-box;
 }
 
 /* generic  tab - 54*/
 .dx-theme-generic .list-content .list-indentation {
-    height: 100%;
     padding-bottom: 54px;
-    
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box; 
-    box-sizing: border-box;
 }
 .dx-theme-generic .list-content .search-wrapper + .list-indentation {
-    height: 100%;
     padding-bottom: 86px;
-
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box; 
-    box-sizing: border-box;
 }
 .dx-theme-generic .list-content .editType-wrapper + .list-indentation {
-    height: 100%;
     padding-bottom: 107px;
-
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box; 
-    box-sizing: border-box;
 }
 
 .dx-theme-generic .editType-wrapper {

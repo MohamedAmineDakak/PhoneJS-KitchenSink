@@ -29,7 +29,8 @@
         customList: {
             dataSource: new DevExpress.data.DataSource({ store: KitchenSink.db.productsCustom }),
             rendered: ko.observable(false),
-            searchQuery: ko.observable().extend({ throttle: 500 })
+            searchQuery: ko.observable().extend({ throttle: 500 }),
+            resetFocus: function(e) { e.component.blur(); }
         },
 
         editEnabled: ko.observable(false),

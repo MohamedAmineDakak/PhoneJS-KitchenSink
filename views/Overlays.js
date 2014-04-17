@@ -11,19 +11,18 @@
             }
         },
         popup: {
+            visible: ko.observable(false),
             showPopup: function() {
-                var popup = $("#popup").data("dxPopup");
-                popup.show();
+                this.popup.visible(true);
             },
             hidePopup: function() {
-                var popup = $("#popup").data("dxPopup");
-                popup.hide();
+                this.popup.visible(false);
             }
         },
         actionsheet: {
+            visible: ko.observable(false),
             showActionSheet: function() {
-                var actionSheet = $("#action_sheet").data("dxActionSheet");
-                actionSheet.show();
+                this.actionsheet.visible(true);
             },
             items: [
                 {
@@ -47,25 +46,26 @@
             ]
         },
         toast: {
+            toastInfoVisible: ko.observable(false),
+            toastErrorVisible: ko.observable(false),
+            toastSuccessVisible: ko.observable(false),
+            toastWarningVisible: ko.observable(false),
+            toastCustomVisible: ko.observable(false),
+
             showInfo: function() {
-                var toast = $("#toast-info").data("dxToast");
-                toast.show();
+                this.toastInfoVisible(true);
             },
             showError: function() {
-                var toast = $("#toast-error").data("dxToast");
-                toast.show();
+                this.toastErrorVisible(true);
             },
             showSuccess: function() {
-                var toast = $("#toast-success").data("dxToast");
-                toast.show();
+                this.toastSuccessVisible(true);
             },
             showWarning: function() {
-                var toast = $("#toast-warning").data("dxToast");
-                toast.show();
+                this.toastWarningVisible(true);
             },
             showCustom: function() {
-                var toast = $("#toast-custom").data("dxToast");
-                toast.show();
+                this.toastCustomVisible(true);
             }
         },
         popover: {

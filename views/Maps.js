@@ -28,11 +28,11 @@
         selectedTab: ko.observable(0),
         mapBing: $.extend({}, basicOptions, {
             provider: "bing",
-            mapType: "roadmap"
+            type: "roadmap"
         }),
         mapGoogle: $.extend({}, basicOptions, {
             provider: "google",
-            mapType: "satellite"
+            type: "hybrid"
         })
     };
 
